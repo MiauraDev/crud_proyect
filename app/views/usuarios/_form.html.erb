@@ -1,0 +1,51 @@
+<%= form_with(model: usuario, class: "form-container") do |form| %> 
+  <% if usuario.errors.any? %>
+    <div class="error-form">
+      <h2><%= pluralize(usuario.errors.count, "error") %> prohibited this usuario from being saved:</h2>
+      <ul>
+        <% usuario.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :nombre, class: "label-form" %>
+    <%= form.text_field :nombre, class: "input-form" %>
+  </div>
+
+  <div>
+    <%= form.label :apellido, class: "label-form" %>
+    <%= form.text_field :apellido, class: "input-form" %>
+  </div>
+
+  <div>
+    <%= form.label :email, class: "label-form" %>
+    <%= form.text_field :email, class: "input-form" %>
+  </div>
+
+  <div>
+    <%= form.label :telefono, class: "label-form" %>
+    <%= form.text_field :telefono, class: "input-form" %>
+  </div>
+
+  <div>
+    <%= form.label :codigo, class: "label-form" %>
+    <%= form.text_field :codigo, class: "input-form" %>
+  </div>
+
+  <div>
+    <%= form.label :distrito, class: "label-form" %>
+    <%= form.text_field :distrito, class: "input-form" %>
+  </div>
+
+  <div>
+    <%= form.label :edad, class: "label-form" %>
+    <%= form.number_field :edad, class: "input-form" %>
+  </div>
+
+  <div>
+    <%= form.submit class: "submit-form" %>
+  </div>
+<% end %>

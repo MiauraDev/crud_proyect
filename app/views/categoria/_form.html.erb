@@ -1,0 +1,27 @@
+<%= form_with(model: categorium, class: "form-container") do |form| %>
+  <% if categorium.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(categorium.errors.count, "error") %> prohibited this categorium from being saved:</h2>
+
+      <ul>
+        <% categorium.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :nombre, class: "label-form" %>
+    <%= form.text_field :nombre, class: "input-form" %>
+  </div>
+
+  <div>
+    <%= form.label :descripcion, class: "label-form"  %>
+    <%= form.text_area :descripcion, class: "input-form" %>
+  </div>
+
+  <div>
+    <%= form.submit  class: "submit-form"%>
+  </div>
+<% end %>

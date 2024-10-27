@@ -1,0 +1,20 @@
+<p style="color: green"><%= notice %></p>
+
+<div class="opcion-show">
+  <div>
+    <%= link_to "❮ Volver", usuarios_path, class: "link-new" %>
+  </div> 
+  <div class="opcion-show">
+    <%= link_to "Editar", edit_usuario_path(@usuario), class: "link-edit" %> 
+  <%= button_to "Elimnar", @usuario, method: :delete, class: "button-destroy" %>
+  </div> 
+</div>
+
+
+<div class="container-content">
+  <div class="content-content">
+<%= render @usuario %>
+</div>
+</div>
+
+

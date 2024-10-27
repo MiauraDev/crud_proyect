@@ -1,0 +1,18 @@
+<p><%= notice %></p>
+
+<% content_for :title, "Articulos" %>
+
+<h1>Artículos</h1>
+<%= link_to "Nuevo Artículo", new_articulo_path, class: "link-new" %>
+<div class="container-content">
+  <% @articulos.each_with_index do |articulo, index| %>
+  <div class="content-content">
+        <p class="numero"><%= index + 1 %></p>
+    <%= render articulo %>
+    <p>
+      <%= link_to "Ver Artículo", articulo,class: "link-show" %>
+    </p>
+    </div>
+  <% end %>
+</div>
+

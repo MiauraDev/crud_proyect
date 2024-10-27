@@ -1,0 +1,19 @@
+<p ><%= notice %></p>
+
+<% content_for :title, "Categoría" %>
+
+<h1>Categoría</h1>
+
+<%= link_to "Nueva Categoría", new_categorium_path, class: "link-new" %>
+
+<div class="container-content">
+  <% @categoria.each do |categorium| %>
+  <div class="content-content">
+    <%= render categorium %>
+    <p>
+      <%= link_to "Ver Categoría", categorium,class: "link-show" %>
+    </p>
+    </div>
+  <% end %>
+</div>
+

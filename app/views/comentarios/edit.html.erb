@@ -1,0 +1,14 @@
+<% content_for :title, "Editar comentario" %>
+
+<h1>Editar comentario</h1>
+
+<div class="opcion-edit">
+  <%= link_to "❮ Volver", @comentario, class: "link-new" %> 
+  <%= link_to "Ver Usuarios", comentarios_path, class: "link-new" %>
+</div>
+
+<div class="container-content">
+<%= render "form", comentario: @comentario %>
+</div>
+
+

@@ -1,0 +1,9 @@
+<% content_for :title, "Nuevo comentario" %>
+
+<h1>Nuevo comentario</h1>
+  <%= link_to "❮ Volver", comentarios_path, class: "link-new" %>
+
+<div class="container-content">
+<%= render "form", comentario: @comentario %>
+</div>
+

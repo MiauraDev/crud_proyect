@@ -1,0 +1,13 @@
+<% content_for :title, "Editar artículo" %>
+
+<h1>Editar artículo</h1>
+
+<div class="opcion-edit">
+  <%= link_to "❮ Volver", @articulo, class: "link-new" %> 
+  <%= link_to "Ver Usuarios", articulos_path, class: "link-new" %>
+</div>
+
+<div class="container-content">
+<%= render "form", articulo: @articulo %>
+</div>
+

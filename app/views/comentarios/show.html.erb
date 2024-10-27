@@ -1,0 +1,17 @@
+<p style="color: green"><%= notice %></p>
+
+<div class="opcion-show">
+  <div>
+    <%= link_to "❮ Volver", comentarios_path, class: "link-new" %>
+    </div> 
+    <div class="opcion-show">
+  <%= link_to "Editar", edit_comentario_path(@comentario), class: "link-edit"  %> 
+  <%= button_to "Elimnar", @comentario, method: :delete, class: "button-destroy" %>
+  </div> 
+</div>
+
+<div class="container-content">
+  <div class="content-content">
+<%= render @comentario %>
+</div>
+</div>

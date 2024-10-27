@@ -1,0 +1,12 @@
+<% content_for :title, "Editar categoria" %>
+
+<h1>Editar categoría</h1>
+
+<div class="opcion-edit">
+  <%= link_to "❮ Volver", @categorium, class: "link-new" %> 
+  <%= link_to "Ver Usuarios", categoria_path, class: "link-new" %>
+</div>
+
+<div class="container-content">
+<%= render "form", categorium: @categorium %>
+</div>

@@ -1,0 +1,20 @@
+<p ><%= notice %></p>
+
+<% content_for :title, "Usuarios" %>
+
+<h1>Usuarios</h1>
+
+<%= link_to "Nuevo Usuario", new_usuario_path, class: "link-new" %>
+
+<div class="container-content">
+  <% @usuarios.each_with_index do |usuario, index| %>
+    <div class="content-content">
+      <p class="numero"><%= index + 1 %></p>
+      <%= render usuario %>
+      <p>
+        <%= link_to "Ver Usuario", usuario, class: "link-show" %>
+      </p>
+    </div>
+  <% end %>
+</div>
+

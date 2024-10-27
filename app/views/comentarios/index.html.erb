@@ -1,0 +1,18 @@
+<p><%= notice %></p>
+
+<% content_for :title, "Comentarios" %>
+
+<h1>Comentarios</h1>
+
+<%= link_to "Nuevo comentario", new_comentario_path, class: "link-new" %>
+<div class="container-content">
+  <% @comentarios.each do |comentario| %>
+  <div class="content-content">
+    <%= render comentario %>
+    <p>
+      <%= link_to "Ver comentario", comentario,class: "link-show" %>
+    </p>
+    </div>
+  <% end %>
+</div>
+
